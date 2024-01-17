@@ -14,6 +14,7 @@ import {
 } from '../pages';
 import { ErrorElement } from "../components";
 import { loader as landingLoader } from "../pages/Landing";
+import { loader as SingleProductLoader } from "../pages/SingleProduct";
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/products/:id",  // Fix the typo here
-        element: <SingleProduct/>
+        element: <SingleProduct/>,
+        errorElement:<ErrorElement/>,
+        loader:SingleProductLoader
       },
       {
         path: "/cart",
